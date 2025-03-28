@@ -78,12 +78,10 @@ def main():
     nist_valid, nist_msg = check_nist_guidelines(password, common_passwords)
     print("\nNIST Guidelines:", nist_msg)
     
-    # Entropy & Strength
     entropy = calculate_entropy(password)
     print(f"Entropy: {entropy:.2f} bits")
     print("Strength:", get_strength(entropy))
     
-    # Suggestions
     suggestions = generate_suggestions(password)
     if suggestions:
         print("\nSuggestions:")
